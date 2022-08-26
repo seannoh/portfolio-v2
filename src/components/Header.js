@@ -3,9 +3,7 @@ import Navigation from './Navigation';
 
 function Header({setCurrentPage}) {
   return (
-    <div>
-      <Navigation setCurrentPage={setCurrentPage}/>
-    </div>
+    <Navigation setCurrentPage={setCurrentPage}/>
   )
 }
 

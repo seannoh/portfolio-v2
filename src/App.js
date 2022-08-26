@@ -1,6 +1,6 @@
 import {React,useCallback} from 'react';
 import './App.css';
-import Container from './components/Container';
+import Main from './components/Main';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 
@@ -92,7 +92,7 @@ function App() {
   return (
     <div>
       <Particles id='tsparticles' init={particlesInit} loaded={particlesLoaded} options={options} />
-      <Container />
+      <Main />
     </div>
   );
 }
