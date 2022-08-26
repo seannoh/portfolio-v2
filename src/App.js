@@ -19,29 +19,25 @@ function App() {
   const options = {
     background: {
       color: {
-        value: "#0d47a1",
+        value: "#000000",
       },
     },
     fpsLimit: 120,
     interactivity: {
       events: {
-        onClick: {
-          enable: true,
-          mode: "push",
-        },
         onHover: {
           enable: true,
-          mode: "repulse",
+          mode: "connect",
         },
         resize: true,
       },
       modes: {
-        push: {
-          quantity: 4,
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
+        connect: {
+          distance:	120,
+	        links: {
+            opacity	:	0.7
+          },
+          radius	:	200
         },
       },
     },
@@ -57,16 +53,19 @@ function App() {
         width: 1,
       },
       collisions: {
-        enable: true,
+        enable: false,
       },
       move: {
         directions: "none",
         enable: true,
         outModes: {
-          default: "bounce",
+          default: "out",
         },
-        random: false,
-        speed: 6,
+        random: true,
+        speed: {
+          min: 1,
+          max: 6
+        },
         straight: false,
       },
       number: {
@@ -77,7 +76,20 @@ function App() {
         value: 80,
       },
       opacity: {
-        value: 0.5,
+        value: {
+          min: 0.1,
+          max: 0.5
+        },
+        animation: {
+          count: 0,
+          enable: true,
+          speed: 2,
+          decay: 0,
+          sync: false,
+          destroy: 'none',
+          startValue: 'random',
+          minimumValue: 0.1
+        }
       },
       shape: {
         type: "circle",
@@ -87,6 +99,8 @@ function App() {
       },
     },
     detectRetina: true,
+    pauseOnBlur: true,
+    pauseOnOutsideViewport: true
   };
 
   return (

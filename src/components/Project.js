@@ -16,7 +16,7 @@ function Project({deployedLink, repoLink, imgPath, projName}) {
                 <Typography variant='h6'>{projName}</Typography>
             </CardContent>
             <CardActions sx={{position:'absolute', top:'0px', right:'0px', zIndex:'10', padding: '4px'}}>
-                <Button href={repoLink} sx={{minWidth: '0px', color: 'black'}}><GitHubIcon></GitHubIcon></Button>
+                <Button href={repoLink} target='_blank' sx={{minWidth: '0px', color: 'black'}}><GitHubIcon></GitHubIcon></Button>
             </CardActions>
             <CardActionArea onClick={() => window.open(deployedLink)}>
                 <CardMedia component='img' height={130} image={imgPath}/>
