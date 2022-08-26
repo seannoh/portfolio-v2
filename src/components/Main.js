@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { About, Contact, Portfolio, Resume } from "../pages";
@@ -7,17 +7,24 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 
 export default function Main() {
-  const [currentPage, setCurrentPage] = useState("About");
+  const [currentPage, setCurrentPage] = useState("about");
+  
+  useEffect(() => {
+    const urlpage = window.location.href.split("#")[1];
+    if(urlpage){
+      setCurrentPage(urlpage)
+    } 
+  }, [])
 
   function renderPage() {
     switch (currentPage) {
-      case "About":
+      case "about":
         return <About />;
-      case "Contact":
+      case "contact":
         return <Contact />;
-      case "Portfolio":
+      case "portfolio":
         return <Portfolio />;
-      case "Resume":
+      case "resume":
         return <Resume />;
       default:
         return;

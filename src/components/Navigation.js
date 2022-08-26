@@ -6,7 +6,7 @@ import {styled} from '@mui/material/styles'
 
 
 function Navigation({setCurrentPage}) {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = React.useState();
 
   function handleSelected(index) {
     setSelectedIndex(index)
@@ -44,16 +44,16 @@ function Navigation({setCurrentPage}) {
 
   return (
     <List>
-      <ListItemButton href='#about' selected={selectedIndex === 0} onClick={() => {handleSelected(0); setCurrentPage('About')}}>
+      <ListItemButton href='#about' selected={selectedIndex === 0} onClick={() => {handleSelected(0); setCurrentPage('about')}}>
         <ListItemText primary='About'/>
       </ListItemButton>
-      <ListItemButton href='#portfolio' selected={selectedIndex === 1} onClick={() => {handleSelected(1); setCurrentPage('Portfolio')}}>
+      <ListItemButton href='#portfolio' selected={selectedIndex === 1} onClick={() => {handleSelected(1); setCurrentPage('portfolio')}}>
         <ListItemText primary='Portfolio'/>
       </ListItemButton>
-      <ListItemButton href='#resume' selected={selectedIndex === 2} onClick={() => {handleSelected(2); setCurrentPage('Resume')}}>
+      <ListItemButton href='#resume' selected={selectedIndex === 2} onClick={() => {handleSelected(2); setCurrentPage('resume')}}>
         <ListItemText primary='Resume'/>
       </ListItemButton>
-      <ListItemButton href='#contact' selected={selectedIndex === 3} onClick={() => {handleSelected(3); setCurrentPage('Contact')}}>
+      <ListItemButton href='#contact' selected={selectedIndex === 3} onClick={() => {handleSelected(3); setCurrentPage('contact')}}>
         <ListItemText primary='Contact'/>
       </ListItemButton>
     </List>

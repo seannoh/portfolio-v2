@@ -11,8 +11,7 @@ import EmailIcon from '@mui/icons-material/Email';
 function Footer() {
   return (
     <footer>
-        <Container sx={{ margin: '75px 0 0 0'}}></Container>
-        <Container maxWidth='100%' sx={{position:'fixed', bottom: '0px',}}>
+        <Container maxWidth='100%' sx={{position:'relative', bottom: '0px',margin: '75px 0 0 0'}}>
           <Grid container spacing={0}>
             <Grid item xs={12} sm={6}>
               <Box sx={{textAlign:'center', margin: '5px 0'}}>
