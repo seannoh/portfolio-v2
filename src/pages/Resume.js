@@ -9,7 +9,7 @@ function Resume() {
     <Card sx={{backgroundColor: 'white'}}>
       <CardContent>
         <Typography gutterBottom variant='h4'>Resume</Typography>
-        <Typography variant='body1'>Check out my <Link href='/#resume'>resume</Link> (coming soon)</Typography>
+        <Typography variant='body1'>Check out my <Link to='/Sean_Oh_Resume.pdf' target='_blank' download>resume</Link></Typography>
       </CardContent>
     </Card>
   )

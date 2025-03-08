@@ -14,8 +14,9 @@ function About() {
         <Grid container>
           <Grid item xs={12} sm={8}>
             <Typography variant='body1'>
-              Hi! I'm currently a UC Santa Barbara Class of 2022 student studying Computer Science. 
-              I have a background in C++ and web development. Check out some of my stuff or reach out!
+              Hi! I'm a recent graduate from the University of California, Santa Barbara with a degree in Computer Science.
+              I have experience with full-stack web development, mobile app development, and Unity.
+              Check out some of my stuff or reach out!
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>

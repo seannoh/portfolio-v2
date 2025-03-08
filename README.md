@@ -40,7 +40,7 @@ This application was built with the support of the resources and staff of the UC
 ```
 MIT License
 
-Copyright (c) 2022 seannoh
+Copyright (c) 2025 seannoh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
